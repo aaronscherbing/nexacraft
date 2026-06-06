@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexacraft — Download</title>
+    <meta name="description" content="Nexacraft is a voxel sandbox game by Nexus Games. Download the free alpha for macOS, Windows, and Linux.">
+    <meta property="og:title" content="Nexacraft">
+    <meta property="og:description" content="A voxel sandbox adventure. Download the free alpha.">
+    <meta property="og:image" content="assets/nexacraft-title.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="panorama-bg"></div>
+    <div class="panorama-vignette"></div>
+
+    <header class="hero">
+        <img src="assets/nexacraft-title.png" alt="Nexacraft" class="title-logo">
+        <p class="tagline">A voxel sandbox adventure by Nexus Games</p>
+        <span class="version-badge">v1.0.0 — Alpha</span>
+
+        <a href="#download" class="cta-btn">Download Now</a>
+    </header>
+
+    <main>
+        <section class="screenshot-section">
+            <img src="assets/screenshot.png" alt="Nexacraft gameplay screenshot" class="screenshot">
+        </section>
+
+        <section id="download" class="download-section">
+            <h2>Download</h2>
+            <p class="subtle">Pick the version for your computer.</p>
+
+            <div class="download-grid">
+                <!-- macOS Apple Silicon -->
+                <a class="download-card" href="https://github.com/aaronscherbing/nexacraft/releases/download/v0.0.0/Nexacraft-1.0.0-arm64.dmg" download>
+                    <div class="platform-icon">🍎</div>
+                    <h3>macOS</h3>
+                    <p class="platform-detail">Apple Silicon (M1/M2/M3)</p>
+                    <span class="file-info">.dmg · 229 MB</span>
+                </a>
+
+                <!-- macOS Intel -->
+                <a class="download-card" href="https://github.com/aaronscherbing/nexacraft/releases/download/v0.0.0/Nexacraft-1.0.0.dmg" download>
+                    <div class="platform-icon">🍎</div>
+                    <h3>macOS</h3>
+                    <p class="platform-detail">Intel (x64)</p>
+                    <span class="file-info">.dmg · 234 MB</span>
+                </a>
+
+                <!-- Windows -->
+                <a class="download-card coming-soon" href="#" onclick="return false;">
+                    <div class="platform-icon">🪟</div>
+                    <h3>Windows</h3>
+                    <p class="platform-detail">64-bit</p>
+                    <span class="file-info">Coming soon</span>
+                </a>
+
+                <!-- Linux -->
+                <a class="download-card coming-soon" href="#" onclick="return false;">
+                    <div class="platform-icon">🐧</div>
+                    <h3>Linux</h3>
+                    <p class="platform-detail">AppImage · 64-bit</p>
+                    <span class="file-info">Coming soon</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="install-section">
+            <h2>Installing on macOS</h2>
+            <p>Nexacraft is currently unsigned (no Apple Developer ID), so macOS will block it the first time you open it. This is normal for indie alpha builds. Follow these steps:</p>
+
+            <div class="install-steps">
+                <div class="step">
+                    <span class="step-num">1</span>
+                    <div>
+                        <strong>Open the .dmg</strong> and drag <em>Nexacraft</em> into your <em>Applications</em> folder. (Don't try to run it from the .dmg window — it won't work.)
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">2</span>
+                    <div>
+                        Open <strong>Terminal</strong> (⌘ + Space → type "Terminal") and paste:
+                        <pre class="cmd"><code>xattr -dr com.apple.quarantine /Applications/Nexacraft.app</code></pre>
+                        Press Enter. (No output means success.)
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">3</span>
+                    <div>
+                        Now <strong>double-click Nexacraft</strong> in your Applications folder. It'll open normally.
+                    </div>
+                </div>
+            </div>
+
+            <details class="alt-method">
+                <summary>Why is this needed? / Common error messages</summary>
+                <p>macOS adds a "quarantine" flag to every file downloaded from the internet. For unsigned apps (no $99/yr Apple Developer ID), macOS shows one of these errors:</p>
+                <ul>
+                    <li><strong>"Nexacraft is damaged and can't be opened"</strong> — the app is fine; macOS just blocks it. The Terminal command above fixes it.</li>
+                    <li><strong>"Nexacraft can't be opened because Apple cannot check it for malicious software"</strong> — same root cause. Same fix.</li>
+                </ul>
+                <p class="subtle">The <code>xattr</code> command removes the quarantine flag so macOS stops blocking the app. It's safe — it only affects this one file.</p>
+            </details>
+        </section>
+
+        <section class="about-section">
+            <h2>About Nexacraft</h2>
+            <p>Nexacraft is a voxel sandbox game inspired by the classics. Build, explore, and survive across procedurally generated worlds — overworld biomes, mob-filled caves, dungeons, villages, and even the Nether.</p>
+            <ul class="feature-list">
+                <li>Infinite procedurally-generated worlds</li>
+                <li>Survival, Creative, and Spectator game modes</li>
+                <li>Mobs, combat, weather, day/night cycles</li>
+                <li>Crafting, mining, building, sleeping in beds</li>
+                <li>Villages, dungeons, and the Nether dimension</li>
+            </ul>
+        </section>
+
+        <section class="studio-section">
+            <div class="studio-tag">⚡ Made by</div>
+            <h2>Nexus Games</h2>
+            <p class="studio-lead">A games division of <strong>Nexus</strong> — a studio devoted to showcasing the power of AI as a creation tool.</p>
+
+            <p>Our pitch is simple: AI lets a tiny team (sometimes a team of one) build things that used to take a whole studio. We're using that to ship games and software at indie pace, with much bigger ambition.</p>
+
+            <p>Nexacraft is a love letter to the voxel sandbox genre — millions of lines worth of game logic, mobs, biomes, structures, and physics, built block by block by humans working hand-in-hand with AI. It's the first thing we've put in your hands.</p>
+
+            <p class="studio-cta">There's a lot more on the way. ◼</p>
+        </section>
+
+        <section class="disclaimer-section">
+            <h2>⚠️ Alpha disclaimer</h2>
+            <p>This game is currently running an alpha version. This means that it may be a bit buggy. More updates and bug fixes coming soon!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nexus Games. All rights reserved.</p>
+        <p class="subtle">Made with Three.js and Electron.</p>
+    </footer>
+</body>
+</html>
